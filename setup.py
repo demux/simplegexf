@@ -15,7 +15,7 @@ setup(
     license="MIT",
     author="Arnar Yngvason",
     url="https://github.com/demux/simplegexf",
-    packages=['simplegexf'],
+    # packages=['simplegexf'],
     install_requires=[str(ir.req) for ir in install_reqs],
     long_description=open("README.md").read(),
     classifiers=[
