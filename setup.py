@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 from setuptools import setup
-from pip.req import parse_requirements
-from pip.download import PipSession
 
-
-BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-install_reqs = parse_requirements(os.path.join(BASE_PATH, 'requirements.txt'),
-                                  session=PipSession())
 
 setup(
     name="simplegexf",
@@ -15,7 +9,7 @@ setup(
     description="A simple .gexf parser/writer for python",
     license="MIT",
     url="https://github.com/demux/simplegexf",
-    install_requires=[str(ir.req) for ir in install_reqs],
+    install_requires=['xmltodict==0.9.2'],
     long_description=open("README.md").read(),
     keywords="simplegexf gephi gexf",
     classifiers=[
