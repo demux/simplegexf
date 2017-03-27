@@ -64,7 +64,7 @@ class Gexf(BaseElement):
         self.path = os.path.realpath(path)
 
         try:
-            xml = open(self.path, 'r').read()
+            xml = open(self.path, 'r', encoding='utf-8').read()
         except IOError:
             xml = TEMPLATE
 
@@ -81,7 +81,7 @@ class Gexf(BaseElement):
         self.tree['gexf'] = value
 
     def write(self):
-        open(self.path, 'w+').write(str(self))
+        open(self.path, 'w+', encoding='utf-8').write(str(self))
 
     @property
     def _graphs(self):
